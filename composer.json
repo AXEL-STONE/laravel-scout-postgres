@@ -1,0 +1,65 @@
+{
+    "name": "gctc-ntgc/laravel-scout-postgres-tsvector",
+    "description": "PostgreSQL Full Text Search Driver for Laravel Scout",
+    "keywords": [
+        "laravel",
+        "laravel scout",
+        "search",
+        "postgresql",
+        "full text search",
+        "FTS"
+    ],
+    "homepage": "https://github.com/devNoiseConsulting/laravel-scout-postgres-tsvector",
+    "license": "MIT",
+    "support": {
+        "issues": "https://github.com/devNoiseConsulting/laravel-scout-postgres-tsvector/issues",
+        "source": "https://github.com/devNoiseConsulting/laravel-scout-postgres-tsvector"
+    },
+    "authors": [
+        {
+            "name": "Michael Flynn",
+            "email": "flynnmj@devnoise.com",
+            "homepage": "https://github.com/devNoiseConsulting"
+        },
+        {
+            "name": "Peter Matseykanets",
+            "email": "pmatseykanets@gmail.com",
+            "homepage": "https://github.com/pmatseykanets"
+        }
+    ],
+    "require": {
+        "php": "^8.0|^8.1|^8.2",
+        "illuminate/contracts": "^9|^10|^11",
+        "illuminate/database": "^9|^10|^11",
+        "illuminate/support": "^9|^10|^11",
+        "laravel/scout": "^9|^10"
+    },
+    "require-dev": {
+        "laravel/pint": "^1.10",
+        "mockery/mockery": "^1.5",
+        "nunomaduro/larastan": "^2.6",
+        "orchestra/testbench": "^8.5",
+        "phpunit/phpunit": "^9.6",
+        "tightenco/duster": "^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "ScoutEngines\\Postgres\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "ScoutEngines\\Postgres\\Test\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "ScoutEngines\\Postgres\\PostgresEngineServiceProvider"
+            ]
+        }
+    }
+}
